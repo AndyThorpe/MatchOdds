@@ -8,7 +8,7 @@ class UpdateWinnings extends Component {
    render() {  
 	 	  
 	  let stake = 1;
-	  let currency = "$";
+	  let currency = "€";
 	  let chosenOdds = this.props.potential;	
 	  let potentialWinnings = (stake * chosenOdds).toFixed(2);
 
