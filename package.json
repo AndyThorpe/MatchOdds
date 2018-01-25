@@ -1,8 +1,8 @@
 {
-  "name": "react-playground",
-  "version": "0.1.0",
+  "name": "Match-Odds",
+  "version": "0.1.1",
   "private": true,
-  "homepage" : "http://andrewthorpe.se/reactjs/",
+  "homepage" : "http://www.andrewthorpe.se/matchodds",
   "dependencies": {
     "jquery": "^3.2.1",
     "react": "^16.2.0",

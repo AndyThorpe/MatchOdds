@@ -2,6 +2,8 @@
 
 # React JS app calculating potential winnings from a selection of bets!
 
+This project can be found at: http://www.andrewthorpe.se/matchodds
+
 Requirements:
 - git
 - Node - https://nodejs.org/en/
@@ -22,11 +24,16 @@ You only need to do this once. Once the installation is complete run:
 npm start
 ```
 
+To deploy to production, create a minified bundle with:
+
+```bash
+npm run build
+```
+
 The app should start automatically.
 If not open the browser and go to http://localhost:3000/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
 
 [React]: http://facebook.github.io/react/
 
