@@ -1,0 +1,268 @@
+
+
+.row {
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding-top: 1.6em;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 800;
+	color: #090f42;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-weight: 800;
+	color: #090f42;
+}
+
+h3 {
+	font-size: 0.9em;
+	font-weight: 400;
+	color: #090f42;
+}
+
+.container {
+	padding-top: 15px;
+	width: 100%;
+	float: left;
+}
+
+.match {
+	width: 100%;
+	padding: 1em;
+	float: left;
+	background: #f2f0f2;
+	margin: 0.5em 0;
+}
+
+.match {
+	margin-bottom: 0.25em;
+}
+
+
+.match .button {
+	margin: 0.1em 0.25em;
+}
+
+.button {
+	font-size: 0.85em;
+}
+
+
+.bold {
+	font-weight: 800;
+}
+
+.selections {
+   	float: left;
+   	width: 100%;
+   	margin-top: 12px;
+}
+
+.winnings {
+	width: 100%;
+	clear:both;
+	position: fixed;
+	top: -50px;
+	height: 50px;
+	transition: all ease 0.6s;
+	background: #090f42;
+	padding-top: 11px;
+}
+
+.winnings h3 {
+	font-size: 1.15em;
+	color: #ffffff;
+}
+
+.active {
+	top: 0px;
+}
+
+
+.summary {
+	height: 0px;
+	position: relative;
+	bottom: 0;
+	transition: all ease 0.6s;
+	overflow: hidden;
+	background: #ffffff;
+	display: none;
+
+}
+
+.summary .container {
+	padding-top: 0px;
+}
+
+.summarise {
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	transition: all ease 0.6s;
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+	box-shadow: 0px 0px 20px -10px #000000;
+	z-index: 9001;
+	padding: 25px 15px;
+	display: block;
+	overflow-y: scroll;
+}
+
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0.75;
+	z-index: 9000;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: none;
+}
+
+.show {
+	display: block!important;
+}
+
+.close {
+	position: relative;
+	right: 8px;
+	top: -18px;
+	font-size: 2.25em;
+	float: right;
+	text-align: right;
+}
+
+
+.summary h1 {
+	font-size: 1.85em;
+	}
+.summary h2 {
+	font-size: 1.1em;
+	}
+.summary h3 {
+	font-size: 0.85em;
+	}
+.summary .close {
+	top: -30px;
+}
+
+.margintop-30 {
+	margin-top: 30px;
+}
+
+.disablescroll {
+	overflow: hidden;
+	
+}
+
+.selected {
+	background-color: #000000;
+}
+
+.stake {
+	text-align: center;
+	padding: 20px 30px 0;
+	width: 50%;
+	margin: 10px 25%;	
+	float: left;
+	
+}
+
+.stake select {
+	float: right;
+	width: 55%;	
+	margin-left: 2%;
+	
+}
+
+
+.stake-input p {
+	font-size: 1.2em;
+}
+
+
+.submit {
+	display: none;
+	clear: both;
+	width: 50%;
+	text-align: center;
+	margin: 20px 25%;
+	float: left;
+}
+
+
+.button {
+	background-color: #5a93b7;
+}
+
+.button:hover {
+	background-color: #5a93b7;
+}
+
+
+.controls .button {
+	margin: 0 5px;
+}
+
+.close-btn {
+	width: 20px;
+}
+
+
+@media (max-width: 1100px) { 
+	.stake {
+  	  text-align: center;
+  	  padding: 20px 30px 0;
+  	  width: 90%;
+  	  margin: 0px 5%;
+  	  float: left;
+	}
+	
+	.stake-input p {
+		font-size: 1em;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	
+	.stake select {
+		width: 100%;	
+		text-align: center;
+		margin-top: 10px;
+	
+	}
+
+
+}
+	
+	
+@media (max-width: 800px) { 
+
+	.submit {
+		width: 80%;
+		margin: 10px 10%;
+	}
+
+	.button {
+		font-size: 0.75em;
+	}
+	
+	.summary h1 {
+		font-size: 1.75em;
+		margin-top: 10px;
+	}
+	
+
+
+}
+
+
+
