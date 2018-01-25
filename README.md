@@ -4,8 +4,8 @@
 
 Requirements:
 - git
-- Node v6
-- npm v3
+- Node [NodeJS]: https://nodejs.org/en/
+- npm [NPM]: https://www.npmjs.com/
 
 To run the app locally:
 
