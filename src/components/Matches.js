@@ -69,9 +69,9 @@ class Matches extends Component {
     }
     
     
-   /* Updates the selection and odds when a new selection is made or changed.
-	  Assigns the selected value (odds) to the index of the match
-	  Then calculates the combined odds by multiplying all the values (odds) within the array using a callback function
+   /* Updates the selection and odds when a new selection is made or updated.
+	  Assigns the selected value (odds) to the match
+	  It then calculates the combined odds by multiplying all the values (odds) within the array using a callback function
 	  Then updates the states
 	*/
 
@@ -79,7 +79,7 @@ class Matches extends Component {
   
 	  	let selectedMatches = this.state.matches.slice() 
 	  
-	  	selectedMatches[i] = val; // Assign the selected value (odds) to the index of that match
+	  	selectedMatches[i] = val; // Assign the selected value (odds) to that match
 	  	this.setState({matches: selectedMatches}) // Update the state
 
 		let combinedOdds = selectedMatches.reduce ( 
