@@ -23,6 +23,8 @@ You only need to do this once. Once the installation is complete run:
 ```bash
 npm start
 ```
+The app should start automatically.
+If not open the browser and go to http://localhost:3000/
 
 To deploy to production, create a minified bundle with:
 
@@ -30,8 +32,6 @@ To deploy to production, create a minified bundle with:
 npm run build
 ```
 
-The app should start automatically.
-If not open the browser and go to http://localhost:3000/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
