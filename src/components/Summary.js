@@ -22,6 +22,8 @@ class Summary extends Component {
 	   
 	   	var summary = document.querySelector('.summary').classList;
 	   	var overlay = document.querySelector('.overlay').classList;
+	   	var body = document.querySelector('body').classList;
+	   	
         summary.remove('summarise'); 
         overlay.remove('show'); 
         

@@ -11,7 +11,6 @@ class Submit extends Component {
 	   	
         summary.add('summarise'); 
         overlay.add('show'); 
-        body.add('disablescroll');    
         
     }
     
@@ -21,7 +20,7 @@ class Submit extends Component {
     return (
 
 	     <div className="controls">
-	     	<a className="button" onClick={this.showSummary} >SUBMIT YOUR SELECTIONS</a>
+	     	<a href="#" className="button" onClick={this.showSummary} >SUBMIT YOUR SELECTIONS</a>
 	     	<a className="button" onClick={this.props.clear} >CLEAR</a>
 	     </div>
       
