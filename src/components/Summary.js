@@ -34,24 +34,23 @@ class Summary extends Component {
 
    render() {  
 	  
-	  let matchodds = this.props.matchodds;
-	  let selections = this.props.selections;
-	  let odds = this.props.winnings;
+	  let matchodds = this.props.matchodds; // Array of selected odds
+	  let selections = this.props.selections; // Array of selections
+	  let odds = this.props.winnings; // total combined winnings
 	  let stake = this.state.stake;
 	  let winnings = (stake * odds).toFixed(2);
-	  
 	  let s = parseFloat(stake); 
 	   
-	  let formattedStake = s.toFixed(2);
+	  let formattedStake = s.toFixed(2); // format to 2DP
 	  
-	  let formattedWinnings = winnings.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	  let formattedWinnings = winnings.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // format larger numbers with a comma
 
 	  let currency = "€";
 	  let fixtures;
 
 	  // If selections were made, map through the matches array to display in Summary page
 	  
-	  if (selections) {
+	  if (selections) { // if selections have been made
 		  
 		  fixtures = this.props.matches.map((matches, index) => {   
 		    let i = index;

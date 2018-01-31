@@ -13,7 +13,7 @@ class Matches extends Component {
 	    
 	    this.state = {
 		    
-	      matches: [],
+	      selectedMatchOdds: [],
 	      selections: [],
 	      odds: 0,
 	      	      
@@ -23,21 +23,25 @@ class Matches extends Component {
 	  
 	// UI functions to hide / display elements 
 
+	// Display winnings widget at top of screen
 	showPotentialWinnings() {
         var winnings = document.querySelector('.winnings').classList;
         winnings.add('active');      
     }
    
+    // Remove winnings widget at top of screen
    	hidePotentialWinnings() {
 	    var winnings = document.querySelector('.winnings').classList;
         winnings.remove('active'); 
     }
     
+    // Display buttons once a selection has been made
     showSubmit() {
 	   	var submit = document.querySelector('.submit').classList;
         submit.add('show'); 
     }
     
+    // Remove buttons when selections cleared
     removeSubmit() {
 	   	var submit = document.querySelector('.submit').classList;
         submit.remove('show'); 
@@ -77,10 +81,10 @@ class Matches extends Component {
 
    update(i, val, selection) {
   
-	  	let selectedMatches = this.state.matches.slice() 
+	  	let selectedMatches = this.state.selectedMatchOdds.slice() 
 	  
 	  	selectedMatches[i] = val; // Assign the selected value (odds) to that match
-	  	this.setState({matches: selectedMatches}) // Update the state
+	  	this.setState({selectedMatchOdds: selectedMatches}) // Update the state
 
 		let combinedOdds = selectedMatches.reduce ( 
 		  	function(a, b){
@@ -93,8 +97,8 @@ class Matches extends Component {
 
 	    this.updateOdds(winnings);
 	    this.updateSelections(i, selection) 
-	    this.showPotentialWinnings() 
-	    this.showSubmit() 
+	    this.showPotentialWinnings() // display winnings widget
+	    this.showSubmit() // show submit + clear buttons
      
    }
    
@@ -146,8 +150,8 @@ class Matches extends Component {
 	          <Fixture 
 	          		match={matches} // Send the match info
 	          		update={this.update.bind(this)} // Send update function to component as a prop
-	          		key={matches.id}  
 	          		i = {i} // Send the index to the fixture component to bind the selection to this fixture
+	          		key={matches.id}
 	        
 	          /> 
 	        );
@@ -161,8 +165,8 @@ class Matches extends Component {
       	 
 	      	<div className="winnings">
 	      	 	<UpdateWinnings 
-	      	 		potential={this.state.odds} 
-	      	 		close={this.hidePotentialWinnings}
+	      	 		potential={this.state.odds} // If the odds state changes then send a new value to the Update Winning component
+	      	 		close={this.hidePotentialWinnings} // Give child component access to function
 	      	 	    
 	      	 	/> 
 	      	</div>
@@ -174,7 +178,7 @@ class Matches extends Component {
 	  			selections={this.state.selections} 
 	  			winnings={this.state.odds} 
 	  			matches={this.props.matches} 
-	  			matchodds={this.state.matches}
+	  			matchodds={this.state.selectedMatchOdds}
 	  			
 	  			/>
 	  			

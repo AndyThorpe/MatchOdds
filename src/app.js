@@ -16,18 +16,17 @@ class App extends Component {
 	 getMatches(){
 
 	   $.ajax({
-		  headers: { 'X-Auth-Token': this.token },
 	      url: 'https://s3-eu-west-1.amazonaws.com/fa-ads/frontend/matches.json',
 	      dataType:'json',
 	      cache: false,
 	      success: function(data){			
 
-		    let m = data.matches;
+		    let m = data.matches; // Access the matches object
 
-	        this.setState({matches: m}, function(){});
+	        this.setState({matches: m}, function(){}); // Send it to state
 
 	      }.bind(this),
-	      error: function(xhr, status, err){
+	      error: function(err){
 	        console.log(err);
 	      }
 	    });
@@ -35,14 +34,14 @@ class App extends Component {
 
 
 	  componentDidMount(){
-	    this.getMatches();
+	    this.getMatches(); // Lifecycle method to mount the matches function
 	  }
 	
 	
 	  render() {
 	    return (
-	         <div className="row" id="top">
-			 	<Matches matches={this.state.matches} />
+	         <div className="row">
+			 	<Matches matches={this.state.matches} /> 
 			 </div>
 	    );
 	  }

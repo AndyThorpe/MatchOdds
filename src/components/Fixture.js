@@ -7,8 +7,7 @@ class Fixture extends Component {
 	    super();
 	    this.state = {
 		    
-		  // set the state for selected odds on this specific fixture
-	      matchOdds:[]
+	      matchOdds:[] 	 // set the state for selected odds on this specific fixture
 
 	    }  
     
@@ -19,9 +18,9 @@ class Fixture extends Component {
 		    
 		  const selected = "#090f42";
 		  const unselected = "#5a93b7";
-		  const i = this.props.i;
-		  const selection = e.target.getAttribute('data-ref');
-	   	  const val = e.target.getAttribute('data-odds');
+		  let i = this.props.i;
+		  let selection = e.target.getAttribute('data-ref');
+	   	  let val = e.target.getAttribute('data-odds');
 	   	  
 
 	   	  this.setState({matchOdds: val}, function(){}); // Set the Match Odds state for this fixture
@@ -68,7 +67,7 @@ class Fixture extends Component {
 	        <h3>{this.props.match.kickoff}</h3>
 	         
 			 <div className="selections">
-			 	<input id="rrr" type="button" data-ref="HOME WIN" ref="home" className="button" onClick={this.selection.bind(this)} value={home} data-odds={this.props.match.odds[1]} />
+			 	<input type="button" data-ref="HOME WIN" ref="home" className="button" onClick={this.selection.bind(this)} value={home} data-odds={this.props.match.odds[1]} />
 			 	<input type="button" data-ref="DRAW" ref="draw" className="button" onClick={this.selection.bind(this)} value={draw} data-odds={this.props.match.odds['x']} /> 
 			 	<input type="button" data-ref="AWAY WIN" ref="away" className="button" onClick={this.selection.bind(this)} value={away} data-odds={this.props.match.odds[2]} />
 			 </div>
